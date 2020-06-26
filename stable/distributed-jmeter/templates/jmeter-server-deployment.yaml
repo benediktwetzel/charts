@@ -31,4 +31,8 @@ spec:
           args: ["server"]
           ports:
             - containerPort: 50000
-            - containerPort: 1099
+            - containerPort: 1099                    
+          env:
+            - name: HEAP
+              value: {{ .Values.server.heap}}
+              # value: "-Xms1G -Xmx2G"

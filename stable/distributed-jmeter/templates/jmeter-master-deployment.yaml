@@ -32,3 +32,7 @@ spec:
             - master
           ports:
             - containerPort: 60000
+          env:
+            - name: HEAP
+              value: {{ .Values.master.heap }}
+              # value: "-Xms1G -Xmx2G"
