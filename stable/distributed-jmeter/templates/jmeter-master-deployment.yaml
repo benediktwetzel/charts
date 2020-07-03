@@ -32,6 +32,7 @@ spec:
             - master
           ports:
             - containerPort: 60000
+            - containerPort: 9270
           env:
             - name: HEAP
               value: {{ .Values.master.heap }}
