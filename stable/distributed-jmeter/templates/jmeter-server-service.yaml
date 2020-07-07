@@ -19,7 +19,8 @@ spec:
       protocol: TCP
       name: tcp-1099
     - port: 9270
-      targetPort: 9270
+      protocol: TCP
+      #targetPort: 9270
       name: metrics
   selector:
     app.kubernetes.io/name: {{ include "distributed-jmeter.name" . }}
