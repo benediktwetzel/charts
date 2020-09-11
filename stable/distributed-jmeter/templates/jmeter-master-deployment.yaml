@@ -37,3 +37,10 @@ spec:
             - name: HEAP
               value: {{ .Values.master.heap }}
               # value: "-Xms1G -Xmx2G"
+          resources:
+            limits:
+              memory:  {{ .Values.master.memory.limit }}
+              cpu:  {{ .Values.master.cpu.limit }}
+            requests:
+              memory: {{ .Values.master.memory.requests }}
+              cpu: {{ .Values.master.cpu.requests }}
